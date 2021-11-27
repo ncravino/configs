@@ -20,3 +20,7 @@ Check if it is already enabled with `grep -R . /sys/module/zswap/parameters/` lo
 If not enabled add `zswap.enabled=1 zswap.compressor=lz4 zswap.max_pool_percent=15 zswap.zpool=z3fold` as kernel parameters in `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub` or equivalent.
 
 You can control the amount of maximum RAM to be used by zswap before using the swap file with `zswap.max_pool_percent=15`.
+
+## Don't forget to apply the modifications
+
+You need to run `sudo update-grub` or equivalent for your bootloader.
