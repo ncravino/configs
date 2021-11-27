@@ -35,3 +35,5 @@ Sane overrides for laptops/desktops with enough RAM and with SSDs/NVME.
 - Reduce Dirty Ratio and Dirty Background Ratio
 - Increase max connections
 
+## LICENSE
+A sane license for a sane future.
