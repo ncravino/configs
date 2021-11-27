@@ -21,6 +21,14 @@ If not enabled add `zswap.enabled=1 zswap.compressor=lz4 zswap.max_pool_percent=
 
 You can control the amount of maximum RAM to be used by zswap before using the swap file with `zswap.max_pool_percent=15`.
 
+## Disable Audit Daemon
+
+You can disable the audit daemon using the kernel boot parameter `audit=0` and masking the service with `systemctl mask systemd-journald-audit.socket`. Read about what it does before doing this.
+
+## Disable Watchdog
+You can disable the watchdog (if active) using the kernel boot parameter `nowatchdog`. Additionally you should blacklist the watchdog module by creating a file in
+`/etc/modprobe.d` with `blacklist [name of the module]`. Read about what it does before doing this.
+
 ## Don't forget to apply the modifications
 
 You need to run `sudo update-grub` or equivalent for your bootloader.
