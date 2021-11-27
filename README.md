@@ -1,7 +1,7 @@
 # configs
 dot files and other configurations
 
-## .indent.pro
+## [.indent.pro](.indent.pro)
 A simple 1TBS/K&R inspired style to be used with GNU indent.
 
 Example:
@@ -29,11 +29,11 @@ void *test(int *data, int index) {
 }
 ```
 
-## sysctl.conf
+## [sysctl.conf](sysctl.conf)
 Sane overrides for laptops/desktops with enough RAM and with SSDs/NVME.
 - Reduce swapiness to 10 (can go even further to 1)
 - Reduce Dirty Ratio and Dirty Background Ratio
 - Increase max connections
 
-## LICENSE
+## [LICENSE](LICENSE)
 A sane license for a sane future.
