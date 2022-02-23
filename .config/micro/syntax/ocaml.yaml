@@ -1,0 +1,51 @@
+# based on https://github.com/MarcusE1W/micro-syntax/blob/master/ocaml.yaml
+
+filetype: Ocaml
+
+detect:
+    filename: "\\.ml$"
+
+rules:
+    - type: "\\b(?i:(int|float|bool|char|string|unit|list))\\b"
+
+    - statement: "\\b(and|as|asr|begin|class|closed|constraint|do|done)\\b"
+    - statement: "\\b(downto|else|end|exception|external|failwith|false)\\b"
+    - statement: "\\b(flush|for|fun|function|functor|if|in|include)\\b"
+    - statement: "\\b(inherit|incr|land|let|load|los|lsl|lsr|lxor)\\b"
+    - statement: "\\b(match|method|mod|module|mutable|new|not|of|open)\\b"
+    - statement: "\\b(option|or|parser|private|ref|rec|raise|regexp|sig)\\b"
+    - statement: "\\b(struct|stdout|stdin|stderr|then|to|true|try|type)\\b"
+    - statement: "\\b(val|virtual|when|while|with)\\b"
+
+    - special: "\\b(let|rec|function|in)\\b"
+
+    # Modules and Constructors
+    - symbol: "\\b[A-Z][a-z]+\\b"
+
+    - symbol: "(\\||@|!|:|::|_|~|=|\\\\|;|\\(\\)|||\\[|\\]|\\{|\\})"
+
+    # Operators
+    - symbol.operator: "(<|>|<=|>=||>|<|)"
+        
+    #type variables
+    - type: "\'[a-z]+\\b"
+
+    - constant.string: "\\b\'[a-zA-Z0-9]\'\\b"
+    
+    - constant.bool: "\\b(true|false)\\b"
+    
+    # Strings
+    - constant.string:
+        start: "\""
+        end: "\""
+        skip: "\\\\."
+        rules:
+            - constant.specialChar: "\\\\."
+
+    - comment:
+        start: "\\(\\*"
+        end: "\\*\\)"
+        rules:
+            - todo: "(TODO|XXX|FIXME):?"
+
+    
