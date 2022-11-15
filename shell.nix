@@ -1,5 +1,5 @@
 #
-# Minimal shell.nix example that just install opam
+# Minimal shell.nix example that just installs opam
 #
 { pkgs ? import <nixpkgs> {} }:
   pkgs.mkShell {
