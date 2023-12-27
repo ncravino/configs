@@ -35,9 +35,13 @@ Sane overrides for laptops/desktops with enough RAM and with SSDs/NVME.
 - Reduce Dirty Ratio and Dirty Background Ratio
 - Increase max connections
 
-## [Kernel Tuning](kernel.md)
+## [Linux Kernel Tuning](kernel.md)
 
 Some kernel configurations to tune it to specific use cases.
+
+## [Windows Configs](windows.md)
+
+Windows wi-fi priority order, et al.
 
 ## [LICENSE](LICENSE)
 A sane license for a sane future.
